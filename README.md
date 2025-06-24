@@ -1,4 +1,4 @@
-# 🔐 Password Strength Checker
+# 🔐 Password Strength Analyzer
 
 A web application that checks whether a password is **Strong**, **Medium**, or **Weak** based on predefined security rules. Built using **HTML**, **CSS**, and **Django**.
 
@@ -25,4 +25,4 @@ A web application that checks whether a password is **Strong**, **Medium**, or *
 1. **Clone the Repository**
    ```bash
    git clone https://github.com/your-username/password-strength-checker.git
-   cd password-strength-checker
+   cd password-strength-Analyzer
