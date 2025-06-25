@@ -4,18 +4,46 @@
 <head>
     <meta charset="UTF-8">
     <title>Password Strength Checker</title>
-    <link rel="icon" type="image/x-type" href="passwordchecker/app/static/ download.ico">
+    <link rel="icon" type="image/x-icon" href="{% static 'checker/download.ico' %}">
     <link rel="stylesheet" href="{% static 'checker/style.css' %}">
 </head>
 <body>
     <div class="container">
         <h2>Password Strength Checker 🔐</h2>
+
+        
+        <div class="instructions">
+            <h3>How it works:</h3>
+            <ul class="instruction-list">
+                <li><span>✔️</span> Enter any password in the field below.</li>
+                <li><span>✔️</span> The system checks for the following:
+                    <ul class="inner-list">
+                        <li><span>🔠</span> Uppercase letters (A–Z)</li>
+                        <li><span>🔡</span> Lowercase letters (a–z)</li>
+                        <li><span>🔢</span> Numbers (0–9)</li>
+                        <li><span>🔣</span> Special characters (!, @, #, etc.)</li>
+                        <li><span>📏</span> Minimum length (8 characters or more)</li>
+                    </ul>
+                </li>
+                <li><span>🔒</span> A password is considered <strong>Strong</strong> if it includes all the above.</li>
+                <li><span>⚠️</span> Weak passwords may lack diversity or be too short.</li>
+            </ul>
+        </div>
+
+        
         <form method="POST">
             {% csrf_token %}
             <input type="password" name="password" placeholder="Enter password" required>
-            <button type="submit">Check Strength</button>
+            <button type="submit" class="cta">
+                <span>Check Strength</span>
+                <svg width="15px" height="10px" viewBox="0 0 13 10">
+                    <path d="M1,5 L11,5"></path>
+                    <polyline points="8 1 12 5 8 9"></polyline>
+                </svg>
+            </button>
         </form>
 
+    
         {% if strength %}
             <div class="result {{ strength|lower }}">
                 Password is: <strong>{{ strength }}</strong>
