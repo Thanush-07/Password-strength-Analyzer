@@ -3,4 +3,4 @@ from django.http import HttpResponse
 from django.urls import reverse
 # Create your views here.
 def index(request):
-    return render(request,'html files/index.html')
+    return render(request,'checker/index.html')

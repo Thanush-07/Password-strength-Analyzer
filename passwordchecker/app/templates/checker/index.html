@@ -1,0 +1,26 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Password Strength Checker</title>
+    <link rel="icon" type="image/x-type" href="passwordchecker/app/static/ download.ico">
+    <link rel="stylesheet" href="{% static 'checker/style.css' %}">
+</head>
+<body>
+    <div class="container">
+        <h2>Password Strength Checker 🔐</h2>
+        <form method="POST">
+            {% csrf_token %}
+            <input type="password" name="password" placeholder="Enter password" required>
+            <button type="submit">Check Strength</button>
+        </form>
+
+        {% if strength %}
+            <div class="result {{ strength|lower }}">
+                Password is: <strong>{{ strength }}</strong>
+            </div>
+        {% endif %}
+    </div>
+</body>
+</html>
