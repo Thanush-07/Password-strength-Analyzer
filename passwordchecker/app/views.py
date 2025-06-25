@@ -1,7 +1,7 @@
 from django.shortcuts import render
 import re 
 
-# 🔐 Function to check password strength
+# Function to check password strength
 def check_password_strength(password):
     length = len(password)
     has_upper = re.search(r'[A-Z]', password)
@@ -16,7 +16,7 @@ def check_password_strength(password):
     else:
         return "Weak"
 
-# 🏠 Home page view
+#  Home page view
 def index(request):
     strength = None
     if request.method == "POST":
