@@ -1,0 +1,40 @@
+body {
+    font-family: Arial, sans-serif;
+    background: #3b3939;
+    display: flex;
+    justify-content: center;
+    padding-top: 100px;
+}
+.container {
+    background: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px gray;
+    width: 400px;
+    text-align: center;
+}
+input {
+    padding: 10px;
+    width: 80%;
+    margin-bottom: 10px;
+}
+button {
+    padding: 10px 20px;
+}
+.result {
+    margin-top: 20px;
+    padding: 10px;
+    border-radius: 5px;
+}
+.result.weak {
+    background-color: #ffdddd;
+    color: red;
+}
+.result.medium {
+    background-color: #fff4cc;
+    color: #e69500;
+}
+.result.strong {
+    background-color: #ddffdd;
+    color: green;
+}
